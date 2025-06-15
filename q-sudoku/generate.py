@@ -1,11 +1,10 @@
 import numpy as np
+from typing import Tuple
 
-def create_sudoku_puzzle(n):
+def create_sudoku_puzzle(n) -> Tuple[np.array, np.array]:
     """
     Generates a solvable n^2 x n^2 Sudoku puzzle and its solution.
-
-    This function returns both the puzzle with empty cells (zeros) and the
-    complete board, which is essential for verifying the solver's output.
+    returns puzzle,solution being both np arrays
     """
     if n == 2:
         # A known valid, solved 4x4 board
